@@ -9,8 +9,6 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "server": " json-server --watch db.json --port 8000"
   },
   "dependencies": {
