@@ -33,7 +33,7 @@ An interactive and fun quiz application built using **React** that fetches data 
 ## 🌍 Demo
 
 Check out the live demo of the project:  
-[Link](https://musical-starship-5cf19a.netlify.app/)
+[Project_Link](https://musical-starship-5cf19a.netlify.app/)
 
 ---
 
