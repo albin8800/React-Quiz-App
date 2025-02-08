@@ -1,0 +1,756 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(248, 248, 248, 0.925), hsl(0, 94%, 80%));
+}
+
+/* Header CSS */
+.welcome {
+    width: 90%;
+    max-width: 550px;
+    height: 45vh;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    margin: 200px auto;
+    border-radius: 20px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    gap: 40px;
+}
+
+.welcome:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+}
+
+.welcome h1 {
+    font-size: 36px;
+}
+
+.welcome p {
+    font-size: 22px;
+    font-weight: 600;
+}
+.welcome h1 span {
+    color: #fc4343;
+}
+
+.welcome button {
+    padding: 20px 50px;
+    background: linear-gradient(90deg, rgba(248, 248, 248, 0.925), hsl(0, 94%, 80%));
+    border: 0;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.welcome button:hover {
+    background: linear-gradient(90deg, rgba(248, 248, 248, 0.925), hsl(0, 94%, 80%));
+    color: black;
+    box-shadow: 0 4px 8px rgba(134, 134, 134, 0.726);
+    transform: scale(1.1);
+}
+
+/* Quiz Main bar */
+.quiz {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+    padding-top: 30px;
+    text-align: center;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    height: 20px;
+}
+
+.progress-container progress {
+    width: 100%;
+    max-width: 500px;
+    height: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    appearance: none; /* Remove default browser styles */
+}
+
+/* WebKit (Chrome, Safari) */
+progress::-webkit-progress-bar {
+    background: rgb(252, 252, 252);
+    border-radius: 8px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #fa9999, #ff3c3c);
+    border-radius: 8px;
+}
+
+/* Mozilla Firefox */
+progress::-moz-progress-bar {
+    background: linear-gradient(90deg, #492020, #ff3c3c);
+    border-radius: 8px;
+}
+
+/* Progress Information */
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Styling for points, timer, and question count */
+.progress-info p {
+    color: rgb(0, 0, 0);
+}
+
+.question-count,
+.timer {
+    color: rgb(0, 0, 0);
+}
+
+
+.question-container {
+    background: linear-gradient(rgba(255, 254, 254, 0.815), rgb(255, 255, 255));
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+    text-align: center;
+}
+
+.question {
+    padding-top: 20px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    max-width: 90%;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.option {
+    width: 90%;
+    max-width: 300px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.39);
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+.option:hover {
+    background: rgb(255, 167, 167);
+    cursor: pointer;
+    transform: scale(1.05);
+    color: #fff;
+}
+.completion {
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 25vh auto;
+    padding: 20px;
+    border: 2px solid #fff;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(2, 2, 2, 0.2);
+}
+
+.completion h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.completion span {
+    font-size: 16px;
+}
+
+.completion .result {
+    font-size: 18px;
+}
+
+.result strong {
+    color: red;
+    font-size: 22px;
+}
+
+.highscore {
+    font-size: 20px;
+}
+
+.highscore strong {
+    color: rgb(255, 0, 0);
+    font-size: 22px;
+}
+
+.completion button {
+    padding: 15px 50px;
+    background: linear-gradient(rgba(247, 59, 59, 0.815), rgba(243, 125, 145, 0.658));
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.5s ;
+}
+
+.completion button:hover {
+    box-shadow: 0 4px 8px rgba(2, 2, 2, 0.2);;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 50px;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #000000;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 0.8s linear infinite;
+}
+
+.loader-container p {
+    color: #fff;
+    font-size: 22px;
+
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.error{
+    width: 60%;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.1);
+    margin: 280px auto;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.error span {
+    font-size: 40px;
+}
+@media (max-width: 768px) {
+    .welcome {
+        padding: 30px;
+        width: 95%;
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+
+    .question-container {
+        width: 95%;
+        max-width: 500px;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .question {
+        font-size: 16px;
+        padding-top: 15px;
+    }
+    .progress-info {
+        font-size: 15px;
+        gap: 20px;
+        max-width: 90%;
+    }
+
+    .progress-container progress {
+        max-width: 250px;
+    }
+}
+.option {
+    width: 100%;
+    max-width: 550px;
+    height: 45px;
+    font-size: 15px;
+}
+
+    .completion {
+        width: 100%;
+        max-width: 500px;
+        gap: 30px;
+        height: 52vh;
+        padding: 15px;
+    }
+
+    .completion h2 {
+        font-size: 24px;
+        padding-top: 19px;
+    }
+
+    .completion span {
+        font-size: 19px;
+    }
+
+    .completion .result {
+        font-size: 20px;
+    }
+
+    .completion button {
+        padding: 15px 28px;
+        font-size: 14px;
+    }
+
+
+/* For small phones (e.g., iPhone SE, Galaxy A series, old Androids) */
+@media (max-width: 480px) {
+    .welcome {
+        padding: 25px;
+        width: 95%;
+        
+    }
+
+    .welcome h1 {
+        font-size: 22px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+    }
+
+    .welcome button {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+
+    .question-container {
+        width: 95%;
+        max-width: 350px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .question {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    .option {
+        width: 95%;
+        max-width: 220px;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 15px;
+    }
+    
+/*End Quiz*/
+    .completion {
+        width: 95%;
+        max-width: 350px;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .completion h2 {
+        font-size: 20px;
+    }
+
+    .completion span {
+        font-size: 13px;
+    }
+
+    .completion .result {
+        font-size: 14px;
+    }
+
+    .highscore {
+        font-size: 18px;
+    }
+
+    .completion button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .error {
+        font-size: 14px;
+    }
+}
+
+/* Extra small devices (very small phones) */
+@media (max-width: 360px) {
+    .welcome {
+        padding: 20px;
+    }
+
+    .welcome h1 {
+        font-size: 20px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .welcome button {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .question {
+        font-size: 18px;
+    }
+
+    .option {
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .completion h2 {
+        font-size: 18px;
+    }
+
+    .error {
+        font-size: 13px;
+    }
+}
+.correct {
+    background: rgb(163, 253, 163);
+    color: #000000;
+    
+    
+}
+.wrong{
+    background: rgb(252, 131, 131);
+    color: white;
+    transform: scale(0.9);
+}
+.wrong:disabled {
+    cursor: no-drop;
+    transform: scale(0.9);
+}
+.correct:disabled{
+    cursor: no-drop;
+    transform: scale(1);
+    
+}
+.correct:disabled:hover {
+    background: rgb(163, 253, 163);
+    color: #000000;
+}
+.wrong:disabled:hover {
+    background: rgb(252, 131, 131);
+}
+.navigation-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 80px;
+    padding-bottom: 20px;
+    
+
+
+}
+.next, .finish {
+    padding: 15px 50px;
+    background: linear-gradient(rgba(247, 59, 59, 0.815), rgba(243, 125, 145, 0.658));
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.5s ;
+}
+.next:hover, .finish:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+/* Container Styling */
+
+/* Title Animation */
+.fade-in {
+    font-size: 30px;
+    font-weight: 700;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Emoji & Message Scale Effect */
+.scale {
+    font-size: 20px;
+    animation: scaleUp 1s ease-in-out;
+}
+
+/* Result Styling */
+.result {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* High Score Styling */
+.highscore {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Animated Restart Button */
+.animated-button {
+    padding: 12px 30px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.animated-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Container for the header */
+.welcome {
+    text-align: center;
+    margin-top: 50px;
+    color: black; /* Set default text color to black */
+  }
+  
+  /* Typewriter effect for the header text */
+  .typewriter {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    color: black; /* Set color of the normal text to black */
+    animation: typing 3s steps(30) 1s 1 normal both, blink-caret .75s step-end infinite;
+  }
+  
+  .highlight {
+    color: #ff6a6a; /* Highlight the "Testline" in a different color */
+  }
+  
+  /* Animation for typing effect */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  /* Blinking cursor effect */
+  @keyframes blink-caret {
+    50% { border-color: transparent; }
+  }
+  
+  /* Scaling and fading in the total question text */
+  .scale-fade {
+    font-size: 20px;
+    color: black; /* Set the text color to black for the total question part */
+    animation: scaleFade 2s ease-in-out;
+  }
+  
+  /* Animation for scaling and fading in */
+  @keyframes scaleFade {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Button Styling with Hover Animation */
+  .animated-btn {
+    padding: 15px 30px;
+    background-color: #ff6a6a;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .animated-btn:hover {
+    transform: scale(1.1);
+    background-color: #ff416c;
+  }
+  
+  /* Subtle scale effect on hover */
+  .animated-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 106, 106, 0.8);
+  }
+  
+
+  /* Button Styling with Pulse Animation */
+.animated-btn {
+    padding: 15px 30px;
+    background-color: #ff6a6a;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: pulse 2s infinite; /* Add pulse animation */
+  }
+  
+  /* Pulse animation effect */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 106, 106, 0.8);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 106, 106, 0.8);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 106, 106, 0.8);
+    }
+  }
+  
+  /* Button hover effect with color change and shadow */
+  .animated-btn:hover {
+    transform: scale(1.1); /* Button gets bigger */
+    background-color: #ff416c; /* Hover background color */
+    box-shadow: 0 0 15px rgba(255, 65, 108, 0.8); /* Glowing shadow */
+  }
+  
+  /* Button focus effect */
+  .animated-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 106, 106, 0.8);
+  }
+
+  
+
+
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ff6a6a;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .intro-container h1 {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  
+  .intro-container p {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .intro-container h2 {
+    font-size: 100px;
+    font-weight: 800;
+    margin-top: 20px;
+    animation: countdown-animation 1s ease-in-out;
+  }
+  
+  @keyframes countdown-animation {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

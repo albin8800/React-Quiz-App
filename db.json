@@ -1,0 +1,64 @@
+{
+    "quizQuestion":[
+        {
+           "question": "If the base sequence in DNA is 5' AAAT 3' then the base sequence in mRNA is :",
+           "options" : ["5'UUUU3'","3'UUUU5'","5'AAAU3'","3'AAAU5'"],
+           "correctAnswer": 2,
+           "points":5 
+        },
+        {
+           "question": "Avery, MacLeod and Mc Carty used the S(virulent) and R (avirulent) strains of streptococcus pneumoniae. They isolated and purified protein, DNA, RNA from the bacteria and treated them with related enzymes. They concluded that :",
+           "options" : ["DNA was transforming agent","RNA was transforming agent","Protein was transforming agent","All are correct"],
+           "correctAnswer": 0,
+           "points":5 
+        },
+        {
+           "question": "Identify the characteristic which is not applicable to the genetic code:",
+           "options" : ["Non-Polar","Non-Overlapping","Commaless","Universal"],
+           "correctAnswer": 0,
+           "points":5 
+        },
+        {
+           "question": "Ribose is differentiable from deoxyribose in having :",
+           "options" : ["Two extra oxygen","No oxygen","Hydroxyl group at 2nd carbon","One extra hydrogen"],
+           "correctAnswer": 2,
+           "points":5 
+        },
+        {
+           "question": "A DNA strand is directly involved in the synthesis of all the following except:",
+           "options" : ["Another DNA","t-RNA & m-RNA","r-RNA","Protein"],
+           "correctAnswer": 3,
+           "points":5 
+        },
+        {
+           "question": "The genes are responsible for growth and differentiation in an organism through regulation of :",
+           "options" : ["Translocation","Transformation","Transduction and translation","Translation and transcription"],
+           "correctAnswer": 3,
+           "points":5 
+        },
+        {
+           "question": "Genetic information is carried out by long chain molecule made up of :",
+           "options" : ["Amino acids","Enzymes","Nucleotides","Histone proteins"],
+           "correctAnswer": 2,
+           "points":5 
+        },
+        {
+           "question": "Anticodons are found in:",
+           "options" : ["mRNA","tRNA","rRNA","In all"],
+           "correctAnswer": 1,
+           "points":5 
+        },
+        {
+           "question":  "Which of the following element is not found in nitrogenous base :",
+           "options" : ["Nitrogen","Hydrogen","Carbon","Phosphorus"],
+           "correctAnswer": 3,
+           "points":5 
+        },
+        {
+           "question": "Transfer of genetic information from a polymer of nucleotides to a polymer of amino acids is:",
+           "options" : ["Replication","Transcription","Translation","Reverse transcription"],
+           "correctAnswer": 2,
+           "points":5 
+        }
+    ]
+}
