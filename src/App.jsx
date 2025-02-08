@@ -85,7 +85,7 @@ const App = () => {
   const totalPoints = quizQuestion.reduce((prev, cur) => prev + cur.points, 0);
 
   useEffect(() => {
-    fetch('http://localhost:8000/quizQuestion')
+    fetch('https://data-ujpm.onrender.com/quizQuestion')
       .then((res) => res.json())
       .then((data) => {
         dispatch({ type: 'fetch_success', payload: data });
