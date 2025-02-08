@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
-import confetti from 'canvas-confetti';
 
 const EndQuiz = ({ points, totalPoints, highScore, dispatch }) => {
   const percentage = (points / totalPoints) * 100;
